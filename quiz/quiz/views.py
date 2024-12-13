@@ -13,7 +13,7 @@ def start_quiz(request):
 
 def questions(request, session_id):
     session = QuizSession.objects.get(id=session_id)
-    questions = Question.objects.all()[:10]  # Get the first 10 questions
+    questions = Question.objects.order_by('?')[:10]  # Get a random set of 10 questions
     if request.method == 'POST':
         answers = request.POST.dict()
         session.total_questions = 10
