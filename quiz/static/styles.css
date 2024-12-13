@@ -1,0 +1,110 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for central alignment */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for headings */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Style for paragraphs */
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Styling for the nickname input field */
+input[type="text"] {
+    width: 50%; /* Reduced width */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    text-align: center; /* Center text inside input */
+}
+
+/* Focus effect on nickname input */
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Buttons styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Focus effect for buttons */
+button:focus {
+    outline: none;
+    background-color: #4CAF50;
+}
+
+/* Hover effect for form buttons */
+button:active {
+    transform: translateY(2px);
+}
+
+/* Styling for forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Align questions to the left */
+form div p {
+    text-align: left;
+}
+
+/* Styling for question options */
+form div label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Spacing between form elements */
+form > div {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results of {{session.nickname}}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results for {{ session.nickname }}</h1>
+        <p>Total Questions: {{ session.total_questions }}</p>
+        <p>Correct Answers: {{ session.correct_answers }}</p>
+        <p>Incorrect Answers: {{ session.incorrect_answers }}</p>
+        <form action="/" method="GET">
+            <button type="submit">Take Quiz Again</button>
+        </form>
+    </div>
+</body>
+</html>

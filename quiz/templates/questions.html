@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{session.nickname}}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Quiz for {{ session.nickname }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% for question in questions %}
+            <div style="text-align: left; width: 100%; margin-left: 20px;">
+                <p><strong>Q{{ forloop.counter }}: {{ question.text }}</strong></p>
+                <label><input type="radio" name="question_{{ question.id }}" value="A"> {{ question.option_a }}</label><br>
+                <label><input type="radio" name="question_{{ question.id }}" value="B"> {{ question.option_b }}</label><br>
+                <label><input type="radio" name="question_{{ question.id }}" value="C"> {{ question.option_c }}</label><br>
+                <label><input type="radio" name="question_{{ question.id }}" value="D"> {{ question.option_d }}</label><br>
+            </div>
+            <hr>
+        {% endfor %}
+        <button type="submit">Submit Answers</button>
+    </form>
+</body>
+</html>
