@@ -19,6 +19,7 @@ A simple Django-based web application for managing and taking quizzes. It allows
 ### Step 1: Clone the repository
 
 git clone https://github.com/aarshsaxena/quiz-app.git
+
 cd quiz-app/quiz
 
 ### Step 2: Install dependencies
